@@ -16,7 +16,7 @@ const API_KEY = process.env.MCP_API_KEY?.trim();
 
 const SERVER_INFO = {
   name: "payload-cms-mcp",
-  version: "2.0.0",
+  version: "2.0.1",
 } as const;
 
 /** Constant-time bearer-token check; protects /mcp without touching /health. */

@@ -1,6 +1,6 @@
 {
   "name": "payload-cms-mcp",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Payload CMS 3.0 MCP Server - A Model Context Protocol server (Streamable HTTP) that validates code, generates templates, and scaffolds projects following best practices.",
   "type": "module",
   "main": "src/index.ts",
