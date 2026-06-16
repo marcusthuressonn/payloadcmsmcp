@@ -1,17 +1,14 @@
 {
   "name": "payload-cms-mcp",
-  "version": "1.0.2",
-  "description": "Payload CMS 3.0 MCP Server - A specialized Model Context Protocol server for Payload CMS",
-  "main": "server.js",
-  "bin": {
-    "payload-cms-mcp": "./server.js"
-  },
+  "version": "2.0.0",
+  "description": "Payload CMS 3.0 MCP Server - A Model Context Protocol server (Streamable HTTP) that validates code, generates templates, and scaffolds projects following best practices.",
+  "type": "module",
+  "main": "src/index.ts",
   "scripts": {
-    "test": "echo \"No tests specified\"",
-    "start": "node server.js",
-    "dev": "node server.js",
-    "local": "node server.js",
-    "prepublishOnly": "npm test"
+    "start": "tsx src/index.ts",
+    "dev": "tsx watch src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "echo \"No tests specified\""
   },
   "keywords": [
     "payload-cms",
@@ -25,25 +22,19 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Matmax-Worldwide/payloadcmsmcp.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Matmax-Worldwide/payloadcmsmcp/issues"
+    "url": "git+https://github.com/disruption-hub/payloadcmsmcp.git"
   },
   "homepage": "https://www.payloadcmsmcp.info",
-  "packageManager": "pnpm@8.15.7+sha512.c85cd21b6da10332156b1ca2aa79c0a61ee7ad2eb0453b88ab299289e9e8ca93e6091232b25c07cbf61f6df77128d9c849e5c9ac6e44854dbd211c49f3a67adc",
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.6.1",
-    "content-type": "^1.0.5",
-    "express": "^4.18.3",
-    "http-proxy-middleware": "^2.0.6",
-    "raw-body": "^3.0.0",
-    "redis": "^4.7.0",
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "express": "^4.19.2",
+    "tsx": "^4.19.2",
     "zod": "^3.24.2"
   },
   "devDependencies": {
+    "@types/express": "^4.17.21",
     "@types/node": "^22.13.10",
-    "vercel": "^41.4.0"
+    "typescript": "^5.7.3"
   },
   "engines": {
     "node": ">=18.0.0"

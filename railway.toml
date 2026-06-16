@@ -1,19 +1,15 @@
 [build]
 builder = "NIXPACKS"
-buildCommand = "npm install && npm run build"
-startCommand = "npm run start"
+buildCommand = "npm install"
 
 [deploy]
 startCommand = "npm run start"
+healthcheckPath = "/health"
 restartPolicyType = "ON_FAILURE"
 restartPolicyMaxRetries = 10
 
-[[plugins]]
-name = "Postgres"
-envs = ["DATABASE_URL"]
-
 [template]
 name = "Payload CMS MCP Server"
-description = "A specialized MCP server for Payload CMS 3.0 that validates code, generates templates, and scaffolds projects following best practices."
+description = "A Model Context Protocol server for Payload CMS 3.0 (Streamable HTTP) that validates code, generates templates, and scaffolds projects following best practices."
 tags = ["nodejs", "express", "payload-cms", "mcp", "ai"]
-icon = "https://www.payloadcmsmcp.info/logopayload.png" 
+icon = "https://www.payloadcmsmcp.info/logopayload.png"

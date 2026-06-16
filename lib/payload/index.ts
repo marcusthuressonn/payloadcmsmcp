@@ -1,14 +1,15 @@
 import { validatePayloadCode } from './validator';
 import { queryValidationRules } from './query';
 import { executeSqlQuery } from './sql';
-import { FileType } from './types';
+import type { FileType } from './types';
 export * from './schemas';
 export * from './validator';
 export * from './query';
 export * from './generator';
 export * from './scaffolder';
 
-export { validatePayloadCode, queryValidationRules, executeSqlQuery, FileType };
+export { validatePayloadCode, queryValidationRules, executeSqlQuery };
+export type { FileType };
 
 /**
  * Convenience function to validate Payload CMS code
